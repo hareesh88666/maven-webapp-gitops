@@ -1,5 +1,7 @@
 resources:
   - deployment.yaml
   - service.yaml
+
 images:
-  - newTag: "1"
+  - name: hareesh88666/maven-web-application
+    newTag: "1"
