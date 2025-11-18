@@ -11,9 +11,5 @@ service:
 ingress:
   enabled: true
   className: "nginx"
-  hosts:
-    host: "maven-webapp.local"
-    path: /
-    pathType: Prefix
 
 tls: []
