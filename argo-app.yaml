@@ -8,10 +8,15 @@ spec:
   source:
     repoURL: https://github.com/hareesh88666/maven-webapp-gitops.git
     targetRevision: main
-    path: .
+    path: maven-webapp
+    helm:
+      valueFiles:
+        - values.yaml
+
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+
   syncPolicy:
     automated:
       prune: true

@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: hareesh88666/maven-web-application
+  tag: "1"
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30080
+
