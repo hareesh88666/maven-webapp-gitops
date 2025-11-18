@@ -4,18 +4,17 @@ kind: Ingress
 metadata:
   name: {{ include "maven-webapp.fullname" . }}
   annotations:
-    kubernetes.io/ingress.class: {{ .Values.ingress.className }}
+    kubernetes.io/ingress.class: "{{ .Values.ingress.className }}"
 spec:
   rules:
-    - host: {{ .Values.ingress.hosts[0].host }}
+    - host: {{ .Values.ingress.hosts.0.host | quote }}
       http:
         paths:
-          - path: {{ .Values.ingress.hosts[0].paths[0].path }}
-            pathType: {{ .Values.ingress.hosts[0].paths[0].pathType }}
+          - path: {{ .Values.ingress.hosts.0.paths.0.path }}
+            pathType: {{ .Values.ingress.hosts.0.paths.0.pathType }}
             backend:
               service:
                 name: {{ include "maven-webapp.fullname" . }}
                 port:
                   number: {{ .Values.service.port }}
 {{- end }}
-
