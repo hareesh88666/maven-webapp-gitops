@@ -1,18 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "maven-webapp.fullname" . }}
+  name: {{ include "maven-webapp.fullname" . }}-{{ .Values.version }}
   labels:
     app: {{ include "maven-webapp.name" . }}
+    version: {{ .Values.version }}
+
 spec:
   replicas: {{ .Values.replicaCount }}
+
   selector:
     matchLabels:
       app: {{ include "maven-webapp.name" . }}
+      version: {{ .Values.version }}
+
   template:
     metadata:
       labels:
         app: {{ include "maven-webapp.name" . }}
+        version: {{ .Values.version }}
+
     spec:
       containers:
         - name: {{ include "maven-webapp.name" . }}

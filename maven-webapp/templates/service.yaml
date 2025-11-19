@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "maven-webapp.fullname" . }}
+  name: {{ include "maven-webapp.fullname" . }}-{{ .Values.version }}
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}     # 80
+    - port: {{ .Values.service.port }}
       targetPort: 8080
       protocol: TCP
   selector:
     app: {{ include "maven-webapp.name" . }}
+    version: {{ .Values.version }}
 

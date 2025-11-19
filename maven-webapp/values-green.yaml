@@ -1,4 +1,4 @@
-version: blue
+version: green
 replicaCount: 2
 
 image:
@@ -10,7 +10,5 @@ service:
   port: 80
 
 ingress:
-  enabled: true
-  className: "nginx"
+  enabled: false
 
-tls: []

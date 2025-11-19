@@ -3,15 +3,24 @@ kind: Application
 metadata:
   name: maven-webapp
   namespace: argocd
+
 spec:
   project: default
-  source:
-    repoURL: https://github.com/hareesh88666/maven-webapp-gitops.git
-    targetRevision: main
-    path: maven-webapp
-    helm:
-      valueFiles:
-        - values.yaml
+
+  sources:
+    - repoURL: https://github.com/hareesh88666/maven-webapp-gitops.git
+      targetRevision: main
+      path: maven-webapp
+      helm:
+        valueFiles:
+          - values.yaml     # BLUE
+
+    - repoURL: https://github.com/hareesh88666/maven-webapp-gitops.git
+      targetRevision: main
+      path: maven-webapp
+      helm:
+        valueFiles:
+          - values-green.yaml   # GREEN
 
   destination:
     server: https://kubernetes.default.svc

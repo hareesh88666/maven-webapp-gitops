@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "maven-webapp.fullname" . }}
+  name: {{ include "maven-webapp.fullname" . }}-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
@@ -13,7 +13,8 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "maven-webapp.fullname" . }}
+                # Always point traffic to BLUE for now
+                name: {{ include "maven-webapp.fullname" . }}-blue
                 port:
-                  number: {{ .Values.service.port }}
+                  number: 80
 {{- end }}
