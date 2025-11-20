@@ -12,6 +12,6 @@ service:
 activeVersion: green     # TRAFFIC GOES TO BLUE
 
 ingress:
-  enabled: true
+  enabled: false
   className: "nginx"
 
