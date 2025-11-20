@@ -6,12 +6,9 @@ image:
   tag: "2"
 
 service:
-  type: ClusterIP
   port: 80
 
-activeVersion: green     # TRAFFIC STILL GOES TO GREEN INITIALLY
+activeVersion: green    # traffic to green (only when switching)
 
 ingress:
-  enabled: false
-  className: "nginx"
-
+  enabled: false        # green should not create ingress
