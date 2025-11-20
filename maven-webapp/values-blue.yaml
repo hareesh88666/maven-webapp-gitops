@@ -8,7 +8,7 @@ image:
 service:
   port: 80
 
-activeVersion: blue     # traffic to blue
+activeVersion: green     # traffic to blue
 
 ingress:
   enabled: true         # blue owns ingress
