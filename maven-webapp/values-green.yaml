@@ -8,7 +8,7 @@ image:
 service:
   port: 80
 
-activeVersion: green    # traffic to green (only when switching)
+activeVersion: blue    # traffic to green (only when switching)
 
 ingress:
   enabled: false        # green should not create ingress
