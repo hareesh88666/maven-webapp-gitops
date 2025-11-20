@@ -2,7 +2,7 @@ version: blue
 replicaCount: 2
 image:
   repository: hareesh88666/maven-web-application
-  tag: "4"
+  tag: "5"
 service:
   port: 80
 activeVersion: blue # traffic to blue
