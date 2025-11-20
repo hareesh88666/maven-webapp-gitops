@@ -6,12 +6,9 @@ image:
   tag: "1"
 
 service:
-  type: ClusterIP
   port: 80
 
-activeVersion: blue     # TRAFFIC GOES TO BLUE
+activeVersion: blue     # traffic to blue
 
 ingress:
-  enabled: true
-  className: "nginx"
-
+  enabled: true         # blue owns ingress
