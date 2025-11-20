@@ -9,4 +9,4 @@ activeVersion: blue # traffic to blue
 ingress:
   enabled: true # blue owns ingress
 fullnameOverride: maven-webapp
-serviceEnabled: false
+serviceEnabled: true
