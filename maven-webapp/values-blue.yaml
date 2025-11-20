@@ -12,3 +12,5 @@ activeVersion: green     # traffic to blue
 
 ingress:
   enabled: true         # blue owns ingress
+  
+serviceEnabled: true
