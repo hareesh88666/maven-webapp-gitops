@@ -13,7 +13,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "maven-webapp.fullname" . }}-{{ .Values.activeVersion }}
+                name: {{ include "maven-webapp.fullname" . }}
                 port:
                   number: 80
 {{- end }}
