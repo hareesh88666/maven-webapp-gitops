@@ -12,3 +12,5 @@ activeVersion: green    # traffic to green (only when switching)
 
 ingress:
   enabled: false        # green should not create ingress
+
+serviceEnabled: false
