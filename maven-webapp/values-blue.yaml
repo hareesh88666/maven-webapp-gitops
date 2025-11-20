@@ -9,8 +9,9 @@ service:
   type: ClusterIP
   port: 80
 
+activeVersion: blue     # TRAFFIC GOES TO BLUE
+
 ingress:
   enabled: true
   className: "nginx"
 
-tls: []

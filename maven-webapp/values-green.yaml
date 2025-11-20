@@ -3,12 +3,15 @@ replicaCount: 2
 
 image:
   repository: hareesh88666/maven-web-application
-  tag: "1"
+  tag: "2"
 
 service:
   type: ClusterIP
   port: 80
 
+activeVersion: blue     # TRAFFIC STILL GOES TO BLUE INITIALLY
+
 ingress:
-  enabled: false
+  enabled: true
+  className: "nginx"
 
