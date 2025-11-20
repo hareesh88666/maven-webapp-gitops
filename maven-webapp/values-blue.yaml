@@ -5,7 +5,7 @@ image:
   tag: "5"
 service:
   port: 80
-activeVersion: green                      # traffic to blue
+activeVersion: blue                     # traffic to blue
 ingress:
   enabled: true                          # blue owns ingress
 fullnameOverride: maven-webapp
