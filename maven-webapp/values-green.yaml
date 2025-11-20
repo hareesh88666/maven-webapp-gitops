@@ -13,4 +13,5 @@ activeVersion: green    # traffic to green (only when switching)
 ingress:
   enabled: false        # green should not create ingress
 
+fullnameOverride: maven-webapp
 serviceEnabled: false
