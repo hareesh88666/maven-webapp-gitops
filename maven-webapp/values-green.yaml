@@ -3,7 +3,7 @@ replicaCount: 2
 
 image:
   repository: hareesh88666/maven-web-application
-  tag: "2"
+  tag: "4"
 
 service:
   port: 80
