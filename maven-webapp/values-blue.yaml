@@ -1,17 +1,12 @@
 version: blue
 replicaCount: 2
-
 image:
   repository: hareesh88666/maven-web-application
-  tag: "1"
-
+  tag: "4"
 service:
   port: 80
-
-activeVersion: blue     # traffic to blue
-
+activeVersion: blue # traffic to blue
 ingress:
-  enabled: true         # blue owns ingress
-  
+  enabled: true # blue owns ingress
 fullnameOverride: maven-webapp
 serviceEnabled: true
