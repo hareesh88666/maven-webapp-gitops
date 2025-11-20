@@ -12,6 +12,6 @@ service:
 activeVersion: green     # TRAFFIC STILL GOES TO GREEN INITIALLY
 
 ingress:
-  enabled: true
+  enabled: false
   className: "nginx"
 
