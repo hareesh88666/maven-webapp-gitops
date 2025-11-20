@@ -13,8 +13,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                # Always point traffic to BLUE for now
-                name: {{ include "maven-webapp.fullname" . }}-blue
+                # Always point ingress to the COMMON service
+                name: {{ include "maven-webapp.fullname" . }}
                 port:
                   number: 80
 {{- end }}
+
