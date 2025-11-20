@@ -9,7 +9,7 @@ service:
   type: ClusterIP
   port: 80
 
-activeVersion: blue     # TRAFFIC STILL GOES TO BLUE INITIALLY
+activeVersion: green     # TRAFFIC STILL GOES TO GREEN INITIALLY
 
 ingress:
   enabled: false
