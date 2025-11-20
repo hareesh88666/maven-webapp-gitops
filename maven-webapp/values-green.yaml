@@ -12,6 +12,6 @@ service:
 activeVersion: blue     # TRAFFIC STILL GOES TO BLUE INITIALLY
 
 ingress:
-  enabled: true
+  enabled: false
   className: "nginx"
 
